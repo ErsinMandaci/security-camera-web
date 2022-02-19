@@ -1,29 +1,42 @@
 <template>
-  <div class="container">
-    <div class="header-left-part">
+  <div data-aos="fade" data-aos-duration="1000" data-aos-once="true" class="container">
+    <div  class="header-left-part">
       <button>
-        <a href=""> HAKKIMIZDA </a>
+        <router-link tag="a" class="link" to="/about">HAKKIMIZDA</router-link>
       </button>
       <button>
-        <a href=""> ÜRÜNLER </a>
+        <router-link tag="a" class="link" to="/products">ÜRÜNLER</router-link>
+        
       </button>
     </div>
     <div class="header-center-part">
-      <img class="img-logo" src="src/assets/lastLogo.png" alt="" />
+      <img  @click="$router.push('/')" class="img-logo" src="src/assets/lastLogo.png" alt="" />
     </div>
     <div class="header-right-part">
       <button>
-        <a href=""> HİZMETLER </a>
+                <a class="link" href="#services">HİZMETLER</a>
+
       </button>
       <button>
-        <a href=""> İLETİŞİM </a>
+                        <a class="link" href="#contact">İLETİŞİM</a>
+
+     
       </button>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+
+  mounted(){
+    let links=document.getElementsByClassName('link');
+    if(this.$route.path!= "/")
+    links.forEach(element => {
+      element.style=`border-bottom:2px solid  rgb(47, 33, 56);`
+    });
+  }
+};
 </script>
 
 <style scoped lang="scss">
@@ -32,37 +45,44 @@ export default {};
 
 $flexBasis: 33.333%;
 
+
+
+
 .container {
   width: 90%;
   margin: auto;
   display: flex;
   flex-flow: row wrap;
-  height: 140px;
+  height: 120px;
   align-items: center;
   font-family: 'Roboto', sans-serif;
 }
 button{
     display: inline-block;
-    background: rgba(0, 0, 0, 0.74);
+    background: rgba(255, 255, 255, 0.604);
     padding: 10px 5%;
     border: 0;
     border-radius: 20px;
-    margin: 5%;
-    // margin-top: 17%;
-    font-size: 1.2rem;
-    width: 200px;
-    min-width: 100px;
+   
+    font-size: 1rem;
+    width: 40%;
+    margin-left: 6%;
     cursor: pointer;
     font-family: 'Roboto Serif', sans-serif;
 
     &:hover{
-        background: rgb(0, 0, 0);
+    background: rgba(255, 255, 255, 0.912);
     }
 
 
     a{
-         color: rgba(245, 245, 245, 0.89);
+         color: rgb(47, 33, 56);
+         text-shadow: 1px 1px 1px rgb(232, 232, 232);
+         font-weight: bolder;
          text-decoration: none;
+          
+          
+        
     }
 }
 
@@ -81,6 +101,7 @@ button{
   .img-logo{
      height: 100%;
      transform: scale(1.2);
+     cursor: pointer;
      
   }
 }

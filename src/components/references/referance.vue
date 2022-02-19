@@ -1,7 +1,10 @@
 <template>
-  <div id="referance" class="row">
-    <img :src="`src/assets/referenceImg/${rImg}`" alt="" />
-  </div>
+ 
+ 
+    <img class="img-item" :src="`src/assets/referenceImg/${rImg}`" alt="" />
+
+   
+
 </template>
 <script>
 export default {
@@ -12,18 +15,20 @@ export default {
 </script>
 
 <style scoped>
-.row {
-  display: flex;
-  flex-basis: 22%;
-  margin: auto;
-  height: auto;
+.img-item {
+  width: 20%;
+  margin-right:5% ;
+  margin-bottom: 10%;
+  display: inline-block;
+ 
   border-radius: 10px;
+ height: 75px;
+
+     filter: drop-shadow(1px 2px 5px rgb(46, 27, 44));
+
   
 
  
 }
-img {
-  width: 100%;
-  background-size: cover;
-}
+
 </style>

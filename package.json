@@ -7,10 +7,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "aos": "^2.3.4",
+    "axios": "^0.26.0",
     "text-animation-vue": "^0.0.1",
     "vue": "^3.2.25",
     "vue-responsive-video-background-player": "^2.2.0",
-    "vue-whatsapp-widget": "^1.0.0"
+    "vue-router": "^4.0.12",
+    "vue-whatsapp-widget": "^1.0.0",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.0.0",

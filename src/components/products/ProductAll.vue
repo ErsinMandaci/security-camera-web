@@ -1,26 +1,26 @@
+
+
 <template>
-  <h3>Öne çıkan ürünler</h3>
-  <div class="container-product-main-page">
-    <div v-for="i in 4" :key="i" class="product-item">
-      <img :src="products[0].ProductImgUrl" alt="That is a joke" />
+  
+  <div class="container-all-product">
+
+      <div v-for="i in 8" :key="i" class="product-item">
+      <img :src="products[0].ProductImgUrl" class="image-product" alt="That is a joke" />
       <h4>{{ products[0].name }}</h4>
-      <h5>{{ products[0].productCode }}</h5>
+     
       <p>{{ products[0].price + " " + products[0].currency }}</p>
     </div>
-  </div>
-  <div class="view-all">
-    <a href="">
-      Tümünü görüntüle
-      <i class="far fa-arrow-alt-circle-right"></i>
-    </a>
+
   </div>
 </template>
 
 <script>
-import { mergeProps } from "@vue/runtime-core";
 export default {
-  data() {
+
+
+     data() {
     return {
+      
       products: [
         {
           productId: Math.floor(Math.random(1) * 100) + Date.now(),
@@ -36,29 +36,58 @@ export default {
       ],
     };
   },
-  mounted() {
-    console.log(this.products[0]);
-    console.log(Date.now());
-    console.log(Math.random(1) * 100);
-  },
-};
+
+}
 </script>
 
-<style lang="scss" scoped>
-.container-product-main-page {
-  display: flex;
-  flex-flow: row wrap;
-  margin: auto;
-  width: 80%;
-  justify-content: space-between;
+<style scoped lang="scss">
+
+.container-all-product{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    flex-flow: row wrap;
+
+
 }
+
+
 .product-item {
-  position: relative;
-  border-radius: 10px;
-  flex-basis: 20%;
+    margin-left: 1%;
+  border-radius: 30px;
+  flex-basis: 30%;
   margin-top: 2%;
+  margin-bottom: 1%;
   padding: 1%;
-  box-shadow: 0px 0px 4px rgba(135, 130, 130, 0.54);
+  box-shadow: 0px 0px 10px rgb(208, 208, 208);
+  background: rgb(255, 255, 255);
+  height: 300px;;
+
+.image-product{
+
+  height: 70%;
+  width: 100%;
+  border-bottom:1px solid #dddcdc;
+}
+
+h4{
+font-size: 0.8rem;
+margin-top: 5%;
+color: #1f1526;
+
+}
+
+
+p{
+  font-size: 1rem;
+  text-align: center;
+  color: #160e1c;
+  font-weight: bolder;
+
+
+
+}
+  
 
   // &::after{
   //   box-shadow: 0 0 10px rgba(135, 130, 130, 0.85);
@@ -70,26 +99,5 @@ export default {
   cursor: pointer;
   box-shadow: 0px 0px 17px rgba(135, 130, 130, 0.54);
 }
-.view-all {
-  margin-left: 80%;
-  margin-top: 1%;
-  cursor: pointer;
 
-  a {
-    text-decoration: none;
-    text-transform: capitalize;
-    font-size: 1rem;
-    color: #505050;
-
-    &:hover {
-      color: #131212;
-    }
-  }
-}
-h3 {
-  text-align: center;
-  color: #302e2e;
-  font-size: 2rem;
-  line-height: 1;
-}
 </style>

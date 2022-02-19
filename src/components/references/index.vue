@@ -1,7 +1,13 @@
 <template>
-<h3>Referanslarımız</h3>
-  <div id="reference">
-    <Referance v-for="(item, index) in referance" :key="index" :rImg="item" />
+
+  <div id="reference"  data-aos="zoom-in" data-aos-duration="1500">
+    <h3><span class="header-sign">~~</span> Referanslarımız <span class="header-sign">~~</span></h3>
+    <div class="referance-logo-container">
+
+    
+    <Referance v-for="(item, index) in referance" :key="index" :rImg="item"/>
+
+    </div>
   </div>
 </template>
 
@@ -11,14 +17,20 @@ export default {
   data() {
     return {
       referance: [
-        "1601807720_borusan_canva.png",
-        "1601807844_yucel boru canva.png",
-        "1601808062_cayirova canva.png",
-        "1601808329_kardemir canva.png",
-        "1601808329_kardemir canva.png",
-        "1601808329_kardemir canva.png",
-        "1601808329_kardemir canva.png",
-        "1601808329_kardemir canva.png",
+        "borusan.png",
+        "yucelBoru.png",
+        "cayirovaBoru.png",
+        "kardemir.png",
+         "borusan.png",
+        "yucelBoru.png",
+        "cayirovaBoru.png",
+        "kardemir.png",
+        
+         "borusan.png",
+        "yucelBoru.png",
+        "cayirovaBoru.png",
+        "kardemir.png",
+      
       ],
     };
   },
@@ -28,14 +40,29 @@ export default {
 
 <style scoped>
 #reference {
-  display: flex;
+
+width: 100%;
+
+}
+
+.referance-logo-container{
+
+    display: flex;
   flex-flow: row wrap;
-  width: 60%;
+  width: 80%;
   margin: auto;
   justify-content: space-between;
+
+
 }
 h3{
-  display: flex;
-  justify-content: center;
+ text-align: center;
+ font-size: 2rem;
+ text-shadow: 1px 1px 2px white;
+ margin-bottom: 5%;
+}
+
+.header-sign{
+  font-size: 1.2rem;
 }
 </style>

@@ -1,5 +1,14 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import router from "./router"
 import VideoBackground from 'vue-responsive-video-background-player'
 
-let vue = createApp(App).component('video-background', VideoBackground).mount('#app');
+let appVue = createApp(App); 
+appVue.use(router);
+
+
+appVue.component('video-background', VideoBackground);
+
+
+
+appVue.mount('#app');

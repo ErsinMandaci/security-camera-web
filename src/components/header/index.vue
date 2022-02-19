@@ -1,19 +1,34 @@
 <template>
+<div class="entry-part-background" >   
+
 
   <video-background
     src="src/assets/Cam/videoplayback.mp4"
     poster="src/assets/Cam/haikon-9360.jpg"
-    :style="`max-height: ${initheight}px; height: 100vh ; width:100%; min-height:500px; `">
+    :style="`min-height:${initheight+20}px;  width:100%; `">
     
     <HeaderContent/>
-    <textAnimation/>
+        
+ 
+    <div data-aos="fade" data-aos-duration="2500" class="computer-screen">
+  
+         <ComputerScreen  />
+       
+     
+     
+
+    </div>
+
+       
+   
   </video-background>
+  </div>
 
 </template>
 
 <script>
 import HeaderContent from "./HeaderContent.vue"
-import {ComputerScreen as textAnimation} from "/node_modules/text-animation-vue/dist/text-animation.es.js"
+import ComputerScreen from "./ComputerScreen.vue"
 export default {
   data(){
 
@@ -23,12 +38,38 @@ export default {
   },
   components:{
     HeaderContent,
-    textAnimation
+   ComputerScreen
   }
 };
 </script>
 
-<style>
-@import "/node_modules/text-animation-vue/dist/style.css";
+<style  lang="scss">
+
+.entry-part-background{
+
+  position: relative;
+
+
+}
+
+
+
+.computer-screen{
+
+  // height: auto;
+  // width: 30%;
+  position:relative;
+
+  left: 64%;
+  top: 15%;
+ height: 370px;
+ max-width: 400px;
+
+  
+  background-image:url('/src/assets/cam/computer-monitor.png');
+  z-index: 1;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 
 </style>

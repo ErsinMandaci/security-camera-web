@@ -1,26 +1,35 @@
 <template>
-  <div class="container-services">
-    <div class="services-two-text">
+<div data-aos="flip-down" data-aos-duration="1000" class="container-services-second" >
+
+
+  <div class="container-services-items">
+ 
+    <div class="services-one-text">
       <h4>Güvenlik Kamerası Sistemleri</h4>
       <p>
-        Temelinde duman algılama, ısı artışı algılama, gaz kaçağı ve benzeri
-        yangın algılama ürünlerinden oluşan entegre bir sistemdir. Yangını
-        olayın gerçekleştiği an algılayıp, yangın anında uygulanacak senaryoyu
-        uygular. Yangın alarm sistemi sadece yangını algılamaz yangın anında
-        söndürme sistemini devreye alabilir veya asansörünüzü kontrol edebilir.
-        Yangın alarmı çözümlerinde 2 farklı teknolojik alt yapıya sahip çözümler
-        bulunmakta olup, Konvansiyonel sistemleri daha ekonomik fakat bölgesel
-        tespitler yaparken adresli sistemlerde noktasal tespitler ve entegrasyon
-        imkanı sağlamaktadır.
+        Güvenlik kamera sistemleri bir çok alanda kullanılan, canlı ve geçmişe
+        dönük kayıtları izleyebileceğiniz bir sistemdir. Analog ve IP Network
+        teknolojisi ile iki farklı teknolojide üretilen güvenlik kameraları gece
+        ve gündüz görüntü alma kabiliyetine sahiptir. Niteliğine göre lazer
+        kameralar ile gece kilometrelerce görüntü alabilirken termal kameralar
+        ile sadece ısı yayan cisimlerin görüntülerini de alabilirsiniz. Günümüze
+        kadar güvenlik kameraları ile gündüz renkli gece ise siyah beyaz görüntü
+        elde edebiliyorduk fakat gelişen teknoloji ile gece görüntülerinide
+        renkli izleyebilmek mümkün hale geldi. StarLight, DarkFighter, ColorVu
+        ve Full Color teknolojisi kullanan her kamera ile gece renkli görüntü
+        elde edilebilir.
       </p>
     </div>
-    <div class="img-right">
+
+       <div class="img-right">
       <img
         class="img-item"
-        src="src/assets/ServicesImg/kamera-ve-alarm-1110x550.jpg"
+        src="src/assets/servicesImg/service2.jpg"
         alt=""
       />
     </div>
+  </div>
+
   </div>
 </template>
 
@@ -29,44 +38,65 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@500&display=swap');
 
-.container-services {
-  width: 80;
+.container-services-second{
+
+height: 500px; margin:5% auto;
+background: rgb(250, 250, 250);
+
+}
+.container-services-items {
+  width: 90%;
+  
   display: flex;
   margin: auto;
-  flex-flow: nowrap;
-  margin-top: 7%;
-  margin-bottom: 7%;
+  flex-flow: row nowrap;
+  padding-top: 5%;
+  justify-content: space-between;
+ 
+
 }
 .img-right {
-  flex-basis: 55%;
-  border: 0;
-}
-.img-item {
-  border-radius: 10px;
-  filter: drop-shadow(1px 2px 10px rgb(75, 74, 74));
-  width: fit-content;
-  height: 530px;
-  max-width: 75%;
-  margin-left: 10%;
-}
-.services-two-text {
   flex-basis: 45%;
-  padding-bottom: 5%;
+  border: 0;
 
-  p {
-    font-family: "Roboto", sans-serif;
-    color: #585965;
-    text-align: justify;
-    font-size: 1.2rem;
-    line-height: 1.8;
-    width: 90%;
-    padding-left: 10%;
+  .img-item {
+    border-radius: 30px;
+      transform: scale(0.9);
+
+    
+    filter: drop-shadow(1px 2px 10px rgb(75, 74, 74));
+    width: fit-content;
+     height: 90%;
+   
+    max-width: 100%;
   }
 }
-h4 {
-  display: flex;
-  justify-content: center;
+
+.services-one-text {
+  flex-basis: 45%;
+  padding-bottom:5%;
+
+  p {
+   font-family: 'Tajawal', sans-serif;
+      text-shadow:1px 1px 2px  #ffffff;
+font-weight: 500;
+
+    color: #2a173a;
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding-left: 10%;
+
+  }
+}
+
+h4{
+    display: flex;
+    justify-content: center;
+     color: #070410;
+  text-shadow:1px 1px 2px  #ffffff;
+  text-decoration-line: underline;
 }
 </style>
