@@ -24,10 +24,8 @@ heightScreen:{
 
 arraySentence:{
     type:String,
-    default:`Hello human, I am your protector to any kind of evil  case.
-             soon as possible call my creater and have a our product!
-             Warning: No where is safe anymore!
-             my number  +90546456456 `
+    default:`Bilişim sektöründe en iyi hizmeti, en ileri teknolojiyi, en fonksiyonel ürünleri hedef müşteri grubumuza sunuyoruz. Müşteri ve çalışan değerimizi en üst düzeyde tutarak kaliteli iş ortaya koyuyoruz.`
+         
 }
 },
     data(){
